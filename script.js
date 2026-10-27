@@ -2,10 +2,11 @@
   const example = document.getElementById("example");
   const loader = document.getElementById("loader");
   const answer = document.getElementById("answer");
+  const loadingMessage = document.getElementById("loading_message");
 
   const select = document.getElementById("post_id");
   const formButton = document.getElementById("form_button");
-  const REQUEST_DELAY = 0;
+  const REQUEST_DELAY = 1000;
   let selectedPost = 1;
 
   const createPostButton = document.getElementById("create_post_button");
@@ -14,7 +15,7 @@
 
   function startLoader(text) {
     loader.style.display = "block";
-    loader.firstChild.textContent = text;
+    loadingMessage.textContent = text;
   }
 
   function hideLoader() {
