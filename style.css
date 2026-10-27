@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: green;
+}
+
+.post_item {
+  color: red;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table#answer {
+  visibility: hidden;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+span.dot {
+  font-size: 40px;
+  opacity: 0;
+  animation: appear 1.5s ease infinite;
+}
+
+span.dot:nth-child(2) {
+  color: red;
+  animation-delay: 0.2s;
+}
+span.dot:nth-child(3) {
+  color: green;
+  animation-delay: 0.4s;
+}
+
+span.dot:nth-child(4) {
+  color: blue;
+  animation-delay: 0.6s;
+}
+
+.form {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@keyframes appear {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div>
+        <button id="example">example</button>
+        <button id="cw1">cw1</button>
+        <button id="cw2">cw2</button>
+        <button id="cw3">cw3</button>
+      </div>
+      <form class="form">
+        <label for="post_id">Wybierz post</label>
+        <select id="post_id">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <button type="submit" id="form_button">Pobierz</button>
+      </form>
+
+      <form class="form">
+        <button type="submit" id="create_post_button">Utwórz post</button>
+      </form>
+      <!-- <div id="answer"></div> -->
+      <table id="answer">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+        </tr>
+      </table>
+      <div class="loading" id="loader">
+        <span></span><span class="dot">.</span><span class="dot">.</span
+        ><span class="dot">.</span>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
