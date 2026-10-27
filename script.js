@@ -26,9 +26,7 @@
       answer.style.visibility = "visible";
     }
 
-    const items = Array.isArray(data) ? data : [data];
-
-    items.forEach((item) => {
+    data.forEach((item) => {
       const row = document.createElement("tr");
       const idColumn = document.createElement("td");
       const titleColumn = document.createElement("td");
@@ -66,9 +64,11 @@
   }
 
   async function fetchAndRender(resource) {
-    const data = await getData(resource);
+    let data = await getData(resource);
 
     if (data !== undefined) {
+      data = Array.isArray(data) ? data : [data];
+      console.log(data[0]);
       renderData(data);
     }
   }
